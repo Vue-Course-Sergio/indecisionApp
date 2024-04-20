@@ -2,6 +2,7 @@
   <section>
     <h3>Counter: {{ counter }}</h3>
     <h3>Square: {{ squareCounter }}</h3>
+    <h4>{{ text }}</h4>
 
     <div>
       <button @click="counter++">+1</button>
@@ -13,7 +14,7 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue';
 
-const props = defineProps<{ value: number }>();
+const props = defineProps<{ value: number; text: string }>();
 
 const counter = ref(props.value);
 const squareCounter = computed(() => counter.value * counter.value);
