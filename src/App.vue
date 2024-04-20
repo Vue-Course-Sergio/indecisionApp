@@ -1,13 +1,19 @@
 <template>
-  <h1>Hola mundo</h1>
+  <section>
+    <h3>Counter: {{ counter }}</h3>
+    <h3>Square: {{ squareCounter }}</h3>
+
+    <div>
+      <button @click="counter++">+1</button>
+      <button @click="counter--">-1</button>
+    </div>
+  </section>
 </template>
 
 <script lang="ts" setup>
-console.log('Hola mundo');
-</script>
+import { computed, ref } from 'vue';
 
-<style scoped>
-h1 {
-  color: green;
-}
-</style>
+const counter = ref(2);
+
+const squareCounter = computed(() => counter.value * counter.value);
+</script>
