@@ -1,7 +1,7 @@
 <template>
   <h1>Mi primera app</h1>
   <hr />
-  <MyCounter />
+  <MyCounter :value="5" />
 </template>
 
 <script lang="ts" setup>
