@@ -1,8 +1,10 @@
 <template>
   <h1 class="text-3xl font-bold underline">Hello world!</h1>
   <hr />
-  <MyCounter :value="1" text="Hola mundo" />
+  <MyCounter :value="1" />
+  <br />
   <MyCounterScript :value="2" />
+  <br />
   <MyCounterScript2 :value="3" />
 </template>
 
